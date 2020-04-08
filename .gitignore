@@ -1,0 +1,7 @@
+.netrwhist
+.vim_tmp/
+plugged/
+tmuxp.yaml
+zshlocal
+zshrc_bak
+
