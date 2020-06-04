@@ -1,5 +1,5 @@
 # 声明脚本目录
-export ZSH="/Users/maverick/.oh-my-zsh"
+export ZSH="${ZDOTDIR:-${HOME}}/.oh-my-zsh"
 
 # 设置脚本主题
 ZSH_THEME="ys"
@@ -7,7 +7,7 @@ ZSH_THEME="ys"
 #ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # 设置自动更新
-DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="false"
 # 在命令执行的过程中，使用小红点进行提示
 COMPLETION_WAITING_DOTS="true"
 
