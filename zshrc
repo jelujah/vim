@@ -181,69 +181,8 @@ cdpath="/home"
 #
 source $ZSH/oh-my-zsh.sh
 
-# check OS
-_uname=$(uname);
-if [ $_uname = 'Linux' ];then
-    _os='linux'
-elif [ $_uname = 'Darwin' ]; then
-    _os='osx'
-else
-    echo "No support for your OS.";
-    exit;
-fi
-
-# some more ls aliases
-alias ll='ls -alFh'
-alias la='ls -A'
-alias l='ls -CF'
-
-# some more git aliases
-alias gf='git-ftp'
-alias gtst='git status'
-alias gtlg='git log --stat'
-alias gtlg1='git log --pretty=format:"%h %an %s" --color=auto'
-alias gtlg2='git log --pretty=oneline'
-alias gtbr='git branch'
-alias gtco='git commit'
-alias gtdi='git diff'
-alias gv='git svn'
-
-#htop
-alias htop='sudo htop'
-
-#iftop
-alias iftop='sudo iftop -i en0'
-
-#rsync
-alias rsync='rsync -avz'
-
-#tmux
-alias tmux='tmux -2'
-alias tmuxp='tmuxp load ~/.tmuxp.yaml -2'
-
-alias cal='cal | grep --before-context 6 --after-context 6 --color -e " $(date +%e)" -e "^$(date +%e)"'
-
-alias vi='vim'
-
-#ctags
-alias ctags='ctags -R *'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-
-#set bash to vim mode
-set -o vi
-
-#set unicode
-export LANG="zh_CN.UTF-8"
-export LANG_ALL="zh_CN.UTF-8"
-
-#set archlinux aur editor
-export VISUAL="vim"
-
 #include private settings
 if [ -f ~/.zshlocal ]; then
     . ~/.zshlocal
 fi
+
